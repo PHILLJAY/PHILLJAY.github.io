@@ -1,0 +1,77 @@
+
+h1 {
+    color: #04080F;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.title-highlight {
+    color: #507DBC;
+    font-size: 64px;
+    font-weight: 900;
+}
+
+p {
+    color: #04080F;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.paragraph-highlight {
+    color: #507DBC;
+}
+
+h2 {
+    color: #04080F;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+
+a {
+    color: #507DBC;
+}
+
+a:active, :visited {
+    color: #19283c;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container p {
+    max-width: 50%;
+    /* adjust as needed */
+}
+
+.flex-item {
+    flex: 1 0 auto;
+}
+
+.meImage {
+    width: 404px;
+    height: auto;
+    object-fit: cover;
+}
+
+.flex-item-right {
+    max-width: 600px; /* Adjust this value as needed */
+}
+
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
