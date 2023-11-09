@@ -11,6 +11,25 @@ h1 {
     color: #507DBC;
     font-size: 64px;
     font-weight: 900;
+    background: linear-gradient(currentColor, currentColor) no-repeat;
+    background-size: 0% 2px;
+    background-position: 0% 100%;
+    transition: background-size .3s;
+}
+.title-highlight::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: #507DBC;
+    transition: width .3s ease-out;
+}
+
+.title-highlight:hover{
+    width:100%;
+    background-size: 100% 4px;
 }
 
 p {
@@ -22,8 +41,19 @@ p {
 }
 
 .paragraph-highlight {
+    position: relative;
     color: #507DBC;
+    text-decoration: none;
+    background: linear-gradient(currentColor, currentColor) no-repeat;
+    background-size: 0% 2px;
+    background-position: 0% 100%;
+    transition: background-size .3s;
 }
+
+.paragraph-highlight:hover{
+    background-size: 100% 2px;
+}
+
 
 h2 {
     color: #04080F;
@@ -36,6 +66,7 @@ h2 {
 
 a {
     color: #507DBC;
+    text-decoration: none;
 }
 
 a:active, :visited {
@@ -59,6 +90,72 @@ a:active, :visited {
     margin-top: 0px;
     flex-grow: 1;
     max-width: 60%;
+}
+
+/* Add a new class for the grid container */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* This will create a responsive grid with a minimum of 300px per item */
+    gap: 20px; /* This adds some space between your projects */
+}
+
+.project {
+    background: #DAE3E5; /* This will give you a light grey background */
+    padding: 15px;
+    margin-bottom: 20px;
+    font-family: Inter;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.project:hover{
+    transform: scale(1.05);
+    background: #BBD1EA;
+}
+
+.project-title {
+    font-size: 48px;
+    color: #04080F;
+    font-weight: 400;
+}
+
+.project-image {
+    max-width: 100%;
+    max-height: 96px; /* or any size you prefer */
+    height: auto;
+    width: auto;
+}
+
+.project-description {
+    font-size: 32px;
+    color: #04080F;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #507DBC;
+    text-decoration: none;
+}
+
+.where2find-image {
+    max-width: 100%;
+    max-height: 2em; /* or any size you prefer */
+    height: auto;
+    width: auto;
+}
+
+.where2find-group {
+    color: #04080F;
+}
+
+.where2find-group a {
+    text-decoration: none;
 }
 
 @media (max-width: 800px) {
